@@ -1,0 +1,11 @@
+/* Design Tokens — To be updated with Penpot */
+:root {
+  /* Colors (placeholder) */
+  --color-charcoal: #1a1a1a;
+  --color-white: #ffffff;
+
+  /* Spacing (8px base) */
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+}

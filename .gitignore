@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Documentation (temporaire)
+docs/
+
+# Environment
+.env
