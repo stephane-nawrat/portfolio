@@ -30,6 +30,10 @@
   --fw-bold: 700;
   --fw-extrabold: 800;
 
+  /* ─── Typographie — Italiques ─────────────────── */
+
+  --font-mono-italic: italic;
+
   /* ─── Typographie — Tailles ───────────────── */
 
   --fs-sm: 0.875rem; /* 14px — footer */
