@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://stephane-nawrat.com/sitemap.xml
