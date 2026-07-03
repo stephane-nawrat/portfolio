@@ -1,0 +1,14 @@
+<svg width="100%" viewBox="0 0 680 400" role="img" style="" xmlns="http://www.w3.org/2000/svg">
+  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(225, 222, 219);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Favicon rond — Stéphane Nawrat</title>
+  <desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(225, 222, 219);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Cercle avec stabilo jaune 40% en haut et blanc cassé 60% en bas</desc>
+
+  <defs>
+    <clipPath id="circle">
+      <circle cx="340" cy="200" r="150"/>
+    </clipPath>
+  </defs>
+
+  <circle cx="340" cy="200" r="150" fill="#faf6f1" style="--darkreader-inline-fill: var(--darkreader-background-faf6f1, #2e2110);;fill:rgb(250, 246, 241);stroke:none;color:rgb(225, 222, 219);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto" data-darkreader-inline-fill=""/>
+  <rect x="190" y="140" width="300" height="210" fill="#ffff66" clip-path="url(#circle)" style="--darkreader-inline-fill: var(--darkreader-background-ffff66, #6b6b00);;fill:rgb(255, 255, 102);stroke:none;color:rgb(225, 222, 219);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto" data-darkreader-inline-fill=""/>
+
+</svg>
