@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Stéphane Nawrat — Développeur Web & Web Mobile Full-Stack"
+      content="Stéphane Nawrat — Développeur JavaScript Full-Stack"
     />
     <title>Stéphane Nawrat — Portfolio</title>
 
@@ -16,52 +16,62 @@
   </head>
 
   <body>
-    <header>
-      <h1>
-        <span class="prenom">STÉPHANE</span>
-        <span class="nom">NAWRAT</span>
-      </h1>
+    <div class="container">
+      <header>
+        <!-- above the fold — tout tient dans 100vh -->
 
-      <p class="dev-web">
-        <span class="stabilo">Développeur Web &</span><br />
-        <span class="stabilo">Web Mobile</span>
-      </p>
-    </header>
+        <h1>
+          <span class="prenom">STEPHANE</span>
+          <span class="nom">NAWRAT</span>
+        </h1>
 
-    <main>
-      <section class="contact">
-        <p class="links">
-          <a href="mailto:contact@stephane-nawrat.com" class="links-contact">
-            contact@stephane-nawrat.com
-          </a>
-        </p>
-        <p class="links">
-          
-            href="https://github.com/stephane-nawrat"
-            class="links-contact"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            github.com/stephane-nawrat
-          </a>
+        <p class="dev-web">
+          <span class="stabilo">Développeur JavaScript</span><br />
+          <span class="stabilo">Full-Stack</span>
         </p>
 
-        <hr class="line" />
-      </section>
+        <section class="contact">
+          <p class="links">
+            <a
+              href="https://github.com/stephane-nawrat"
+              class="links-contact links-contact--muted"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github/stephane-nawrat
+            </a>
+          </p>
+          <p class="links">
+            <a
+              href="https://www.linkedin.com/in/stephane-nawrat/"
+              class="links-contact links-contact--muted"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin/stephane-nawrat
+            </a>
+          </p>
+        </section>
+      </header>
 
-      <section class="profil">
-        <p class="hello">
-          <!-- BIO À COMPLÉTER -->
-          Développeur Web Full-Stack basé à Marseille, spécialisé JavaScript.
-          Ancien photojournaliste et créateur de webdocs, j'apporte une
-          sensibilité visuelle et narrative au développement web.
-        </p>
-      </section>
-    </main>
+      <main>
+        <!-- below the fold — visible au scroll -->
 
-    <footer>
-      <p><!-- COPYRIGHT À COMPLÉTER --></p>
-    </footer>
+        <section class="profil">
+          <p class="hello">
+            <!-- BIO À COMPLÉTER -->
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            aliquip ex ea commodo.
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <p><!-- COPYRIGHT À COMPLÉTER --></p>
+      </footer>
+    </div>
 
     <script src="assets/js/main.js"></script>
   </body>

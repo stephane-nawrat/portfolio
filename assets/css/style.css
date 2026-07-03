@@ -1,0 +1,239 @@
+/* ==========================================================
+   Style principal
+   Ordre : Fonts → Layout → Header → Sections → Footer →
+           Utilitaires → Media Queries
+   ========================================================== */
+
+/* ─── Table des matières ──────────────────────────────────
+   1. Fonts
+   2. Layout
+   3. Header
+   4. Section — Contact
+   5. Section — Profil
+   6. Footer
+   7. Utilitaires
+   8. Media Queries
+      - xs  (max 393px)
+      - sm  (640px)
+      - md  (768px)
+      - lg  (1024px)
+      - xl  (1280px)
+   ========================================================== */
+
+/* ─────────────────────────────────────────────────────────
+   1. FONTS
+   Import Google Fonts — JetBrains Mono (100→800)
+   Changer ici si on migre vers self-hosted
+   ───────────────────────────────────────────────────────── */
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+/* ─────────────────────────────────────────────────────────
+   2. LAYOUT
+   Conteneur centré — max-width 768px
+   padding horizontal : var(--space-md) sur mobile
+   ───────────────────────────────────────────────────────── */
+
+.container {
+  width: 100%;
+  max-width: 768px; /* largeur max — s'adapte en lg/xl via media queries */
+  margin: 0 auto; /* centrage horizontal */
+  padding: 0 var(--space-md); /* respiration latérale mobile */
+}
+
+/* ─────────────────────────────────────────────────────────
+   3. HEADER
+   Above the fold — occupe 100vh
+   Contenu centré verticalement via flexbox
+   Mobile : un mot par ligne (display: block)
+   Tablet+ : STÉPHANE NAWRAT sur la même ligne (media query md)
+   ───────────────────────────────────────────────────────── */
+
+header {
+  min-height: 100vh; /* occupe tout l'écran */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* contenu centré verticalement */
+  padding-bottom: 20vh;
+}
+
+h1 {
+  font-size: var(--fs-5xl); /* 60px */
+  line-height: var(--lh-title); /* 1.2 — titres serrés */
+  letter-spacing: 2px; /* espacement entre lettres */
+  margin-bottom: var(--space-xs); /* espace sous h1 avant .dev-web */
+}
+
+.prenom {
+  display: block; /* mobile : une ligne */
+  color: var(--color-text-muted); /* gris neutre */
+  font-weight: var(--fw-light); /* 300 — léger */
+}
+
+.nom {
+  display: block; /* mobile : une ligne */
+  color: var(--color-text); /* presque noir */
+  font-weight: var(--fw-bold); /* 700 — bold */
+  letter-spacing: 5px; /* espacement marqué */
+}
+
+.dev-web {
+  font-size: var(--fs-4xl); /* 48px */
+  font-weight: var(--fw-medium); /* 500 */
+  line-height: var(--lh-tight); /* 1.3 */
+  margin-bottom: var(--space-md); /* espace sous .dev-web avant .contact */
+}
+
+/* ─────────────────────────────────────────────────────────
+   4. SECTION — CONTACT
+   Bloc aligné à droite sur le contenu le plus long
+   Liens muted sans soulignement — hover underline
+   ───────────────────────────────────────────────────────── */
+
+.contact {
+  display: block;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-md); /* espace entre les liens et la ligne */
+  border-bottom: 1.5px solid var(--color-text-muted); /* ligne visible dans le fold */
+}
+
+.links {
+  line-height: var(--lh-tight); /* respiration entre les lignes */
+  padding: var(--space-2xs) 0; /* zone de tap — espace vertical cliquable */
+}
+
+.links-contact {
+  font-family: var(--font-mono); /* JetBrains Mono — cohérent avec le reste */
+  font-size: var(--fs-xl); /* 24px */
+  font-weight: var(--fw-regular); /* 400 */
+  color: var(--color-text-muted); /* gris neutre par défaut */
+  transition: color var(--transition-fast); /* 150ms — hover fluide */
+}
+
+/* Liens muted — pas soulignés */
+.links-contact--muted {
+  color: var(--color-text-muted); /* gris neutre */
+  text-decoration: none; /* pas de soulignement */
+}
+
+.links-contact--muted:hover {
+  color: var(--color-text); /* gris foncé au hover */
+  text-decoration: underline;
+}
+
+/* ─────────────────────────────────────────────────────────
+   5. SECTION — PROFIL
+   Below the fold — visible au scroll
+   border-top : séparateur décoratif en CSS (remplace <hr>)
+   ───────────────────────────────────────────────────────── */
+
+.profil {
+  padding-top: var(--space-lg); /* espace entre le trait et la bio */
+
+  margin-bottom: var(--space-xl); /* espace sous la bio */
+}
+
+.hello {
+  font-size: var(--fs-2xl); /* 30px */
+  font-weight: 400; /* regular */
+  color: var(--color-text); /* presque noir */
+  line-height: var(--lh-normal); /* 1.5 — confortable à lire */
+  text-align: justify; /* justifié */
+  text-align-last: left; /* dernière ligne alignée à gauche */
+}
+
+/* ─────────────────────────────────────────────────────────
+   6. FOOTER
+   Minimal — copyright centré
+   ───────────────────────────────────────────────────────── */
+
+footer {
+  padding: var(--space-lg) 0;
+  text-align: center;
+  font-size: var(--fs-sm); /* 14px — discret */
+  color: var(--color-text-muted); /* gris neutre */
+  border-top: 1px solid var(--color-border);
+}
+
+/* ─────────────────────────────────────────────────────────
+   7. UTILITAIRES
+   .stabilo : effet surligneur jaune
+   linear-gradient : fonctionne sur plusieurs lignes
+   Modifier --color-stabilo dans tokens.css
+   ───────────────────────────────────────────────────────── */
+
+.stabilo {
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    var(--color-stabilo) 60% /* surligneur bas — ajuster % si besoin */
+  );
+}
+
+/* ─────────────────────────────────────────────────────────
+   8. MEDIA QUERIES — Mobile first
+   Base : mobile (< 640px)
+   ───────────────────────────────────────────────────────── */
+
+/* xs — max 390px ─────────────────────────────────────── */
+/* Petits mobiles : iPhone SE, iPhone 5                  */
+
+@media (max-width: 390px) {
+  .container {
+    padding: 0 var(--space-sm); /* marges latérales réduites */
+  }
+
+  h1 {
+    font-size: var(--fs-4xl); /* 48px — réduit sur petit écran */
+  }
+
+  .dev-web {
+    font-size: var(--fs-3xl); /* 36px — réduit sur petit écran */
+  }
+
+  .links-contact {
+    font-size: var(--fs-md); /* 18px — plus lisible sur petit écran */
+  }
+
+  .hello {
+    font-size: var(--fs-xl); /* 24px — réduit sur petit écran */
+  }
+}
+
+/* sm — 640px ─────────────────────────────────────────── */
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 var(--space-lg); /* plus de respiration latérale */
+  }
+}
+
+/* md — 768px ─────────────────────────────────────────── */
+/* STÉPHANE NAWRAT sur la même ligne à partir de tablet  */
+
+@media (min-width: 768px) {
+  .prenom,
+  .nom {
+    display: inline; /* même ligne — tablet et desktop */
+  }
+
+  .prenom::after {
+    content: " "; /* espace entre prénom et nom */
+  }
+}
+
+/* lg — 1024px ────────────────────────────────────────── */
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 860px; /* plus large sur grand écran */
+  }
+}
+
+/* xl — 1280px ────────────────────────────────────────── */
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 960px; /* largeur max desktop */
+  }
+}

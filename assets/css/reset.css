@@ -1,4 +1,11 @@
-/* Modern CSS Reset */
+/* ==========================================================
+   Reset CSS
+   Stable — ne pas modifier sauf raison explicite
+   ========================================================== */
+
+/* ─── Box model universel ─────────────────────── */
+/* Inclut padding et border dans le calcul de width/height */
+
 *,
 *::before,
 *::after {
@@ -7,18 +14,44 @@
   padding: 0;
 }
 
+/* ─── Rendu typographique ─────────────────────── */
+/* Lissage des fonts sur webkit (macOS/iOS) et Firefox */
+
 html {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/* ─── Body ────────────────────────────────────── */
+/* min-height évite la page courte sur peu de contenu */
+/* transition sur bg et color pour le toggle dark/light */
 
 body {
   min-height: 100vh;
-  line-height: 1.5;
+  line-height: var(--lh-normal);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal);
 }
+
+/* ─── Médias ──────────────────────────────────── */
+/* display: block évite l'espace parasite sous les images */
+/* max-width: 100% empêche le débordement hors conteneur  */
 
 img,
 picture,
 svg {
   display: block;
   max-width: 100%;
+}
+
+/* ─── Liens ───────────────────────────────────── */
+/* Héritage de couleur — chaque composant définit son style */
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
