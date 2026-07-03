@@ -1,5 +1,7 @@
 # macOS
 .DS_Store
+.AppleDouble
+.LSOverride
 
 # Editor
 .vscode/
@@ -10,3 +12,8 @@ docs/
 
 # Environment
 .env
+.env.local
+.env.*.local
+
+# Logs
+*.log
